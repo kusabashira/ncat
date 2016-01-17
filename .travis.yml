@@ -16,13 +16,13 @@ deploy:
   api_key:
     secure: E9ri8vwuHAJE1P1woYp3HrKZASRYU4JeZ8lddZmRt4rQwoCU5hl+9B9/0su7kGtpeWqALS34Dx+ahS/eZv/3PGVcU7kbkMDsCyLO8zz4leJnks7ODStnNP+CYcezwWRqL7lh285m2x2zebRCMKzh4SIrXtz2QXaHj1+3cyboZ56SCWVdxHW1IP4063CNYSKFt8XL4B34IkgyMkpwCRc+goY+cx+N+Xi7Gi4BGabozUg8c035TJ5OvUmV4iFkzI8qsAC3tBaDLv+hBRVQ5O7I8Ktb8svcSHla1DWnxatDyTi2FUteg3KEO+hniR1WrXgl9QR2MVAZIfzRqcm3hbUCjsHtZIAQoDVNQErR3nNzcJu6rs42+qBxi8ecUmSBUTGOe5nIfa13d1dsD70RvaVBLhdqi7nmPD2S0r9pHxvNfOL54GiPxm7Jyvel6I7j/oJz5+A8katUajH77S9R3kA9A4KeK58yRj8KC2QssdcwQLgoFtoSYHpNGFUIswW7uYD3LiI0IUgL5FdnUYu6cV9RgNJHlIGpSQDcgHsnYskVS3X/MnjgjpmowOwyGpIllvm4o416Ejdlb2giEPbEt0pW1hSf8MxlKCcX2QMFeF16ygIEVomgqSEsfCs9DZsKrYcgWgmGSYD163ZCMS2riw7CNRhkue16Cb1623g/Dwm5kNU=
   file:
-    - $RELEASES_PATH/snapshot/ncat_windows_386.zip
-    - $RELEASES_PATH/snapshot/ncat_windows_amd64.zip
-    - $RELEASES_PATH/snapshot/ncat_darwin_386.zip
-    - $RELEASES_PATH/snapshot/ncat_darwin_amd64.zip
-    - $RELEASES_PATH/snapshot/ncat_linux_386.tar.gz
-    - $RELEASES_PATH/snapshot/ncat_linux_amd64.tar.gz
-    - $RELEASES_PATH/snapshot/ncat_linux_arm.tar.gz
+    - $RELEASES_PATH/snapshot/catn_windows_386.zip
+    - $RELEASES_PATH/snapshot/catn_windows_amd64.zip
+    - $RELEASES_PATH/snapshot/catn_darwin_386.zip
+    - $RELEASES_PATH/snapshot/catn_darwin_amd64.zip
+    - $RELEASES_PATH/snapshot/catn_linux_386.tar.gz
+    - $RELEASES_PATH/snapshot/catn_linux_amd64.tar.gz
+    - $RELEASES_PATH/snapshot/catn_linux_arm.tar.gz
   on:
-    repo: kusabashira/ncat
+    repo: kusabashira/catn
     tags: true

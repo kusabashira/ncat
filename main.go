@@ -10,7 +10,7 @@ import (
 )
 
 var (
-	name  = "ncat"
+	name  = "catn"
 	usage = fmt.Sprintf("usage: %s N [FILE]...", name)
 )
 
