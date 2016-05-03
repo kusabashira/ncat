@@ -13,6 +13,17 @@ $ seq 3 | catn 2
 3
 ```
 
+Usage
+-----
+
+```
+$ catn N [FILE]...
+```
+
+`N` is a number of times to repeat.
+
+If `N` is a negative number, it interpreted as an infinity.
+
 License
 -------
 
