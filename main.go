@@ -42,12 +42,11 @@ func main() {
 		os.Exit(1)
 	}
 
-	switch {
-	case n < 0:
+	if n < 0 {
 		for {
 			os.Stdout.Write(src)
 		}
-	default:
+	} else {
 		for i := 0; i < n; i++ {
 			os.Stdout.Write(src)
 		}
