@@ -2,11 +2,10 @@ package main
 
 import (
 	"fmt"
+	"io"
 	"io/ioutil"
 	"os"
 	"strconv"
-
-	"github.com/yuya-takeyama/argf"
 )
 
 var (
@@ -16,6 +15,22 @@ var (
 
 func printErr(err error) {
 	fmt.Fprintf(os.Stderr, "%s: %s\n", name, err)
+}
+
+func toARGF(args []string) (r io.Reader, err error) {
+	if len(args) < 1 {
+		return os.Stdin, nil
+	} else {
+		rs := make([]io.Reader, len(args))
+		for i := 0; i < len(args); i++ {
+			f, err := os.Open(args[i])
+			if err != nil {
+				return nil, err
+			}
+			rs[i] = f
+		}
+		return io.MultiReader(rs...), nil
+	}
 }
 
 func main() {
@@ -30,7 +45,7 @@ func main() {
 		os.Exit(2)
 	}
 
-	r, err := argf.From(os.Args[2:])
+	r, err := toARGF(os.Args[2:])
 	if err != nil {
 		printErr(err)
 		os.Exit(2)
