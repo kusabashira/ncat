@@ -20,9 +20,26 @@ Usage
 $ catn N [FILE]...
 ```
 
+Other Specification
+-------------------
+
 `N` is a number of times to repeat.
 
 If `N` is a negative number, it interpreted as an infinity.
+
+```
+$ echo Hello | catn -2
+Hello
+Hello
+Hello
+Hello
+Hello
+Hello
+Hello
+Hello
+Hello
+...
+```
 
 License
 -------
